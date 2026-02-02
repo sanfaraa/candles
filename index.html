@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoadys- Ahla Cadeau</title>
+    <title>Hoadys - Ahla Cadeau</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -25,10 +25,7 @@
             overflow-x: hidden;
         }
 
-        /* Specific font for Arabic/Derja classes */
-        .ar-text {
-            font-family: 'Cairo', sans-serif;
-        }
+        .ar-text { font-family: 'Cairo', sans-serif; }
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
@@ -118,7 +115,6 @@
             margin: 0 auto;
         }
         
-        /* The Mystery Box Style */
         .mystery-box {
             text-align: center;
             background: #fff0f3;
@@ -176,7 +172,6 @@
             position: relative;
         }
 
-        /* Urgency Sticker */
         .urgent-sticker {
             position: absolute;
             top: -15px;
@@ -194,12 +189,13 @@
 
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--primary); font-size: 0.95rem; }
+        
         input, textarea, select {
             width: 100%;
             padding: 14px;
             border: 1px solid #ddd;
             border-radius: 6px;
-            font-family: 'Cairo', sans-serif; /* Better for inputs */
+            font-family: 'Cairo', sans-serif;
             box-sizing: border-box;
             font-size: 1rem;
         }
@@ -439,7 +435,7 @@
 
             const data = new FormData(form);
             
-            // --- PASTE YOUR GOOGLE APPS SCRIPT URL HERE ---
+            // --- UPDATED URL HERE ---
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxZDCBtTSfc1nOsLsKWC9gEjOns3tYgUfpMq3EccJuIHj03HOWNF8T6nH-5vB7st5V4/exec'; 
 
             fetch(scriptURL, { method: 'POST', body: data})
@@ -463,5 +459,3 @@
     </script>
 </body>
 </html>
-
-
