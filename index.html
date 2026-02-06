@@ -1,327 +1,287 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoadys - CADEA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoadys - CADEA</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary: #5D1923;
-            --accent: #B76E79;
-            --bg: #FDFBF7;
-            --text: #333;
-            --success: #27ae60;
-            --urgent: #e74c3c;
-        }
+<style>
+:root{
+--primary:#5D1923;
+--accent:#B76E79;
+--bg:#FDFBF7;
+--text:#333;
+--success:#27ae60;
+--urgent:#e74c3c;
+}
+body{
+font-family:'Montserrat',sans-serif;
+background:var(--bg);
+margin:0;
+color:var(--text);
+}
+.ar-text{font-family:'Cairo',sans-serif}
+h1,h2,h3{font-family:'Playfair Display',serif;color:var(--primary)}
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            line-height: 1.6;
-        }
+.promo-banner{
+background:var(--primary);
+color:#fff;
+text-align:center;
+padding:10px;
+font-weight:bold;
+position:sticky;
+top:0;
+z-index:100;
+font-family:'Cairo',sans-serif;
+}
 
-        .ar-text { font-family: 'Cairo', sans-serif; }
+.hero{
+text-align:center;
+padding:90px 20px;
+background:linear-gradient(rgba(253,251,247,.85),rgba(253,251,247,.95)),url('img1.jpg');
+background-size:cover;
+border-bottom:5px solid var(--accent);
+}
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary);
-        }
+.hero h1{font-size:3rem}
+.arabic-poetic{font-size:1.4rem;font-weight:700;margin:15px 0}
+.tagline{color:var(--accent);letter-spacing:2px}
 
-        .promo-banner {
-            background-color: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            font-family: 'Cairo', sans-serif;
-        }
+.price-badge{
+background:var(--primary);
+color:#fff;
+padding:12px 30px;
+border-radius:50px;
+display:inline-block;
+font-size:1.4rem;
+font-weight:bold;
+margin-top:15px;
+}
 
-        .hero {
-            text-align: center;
-            padding: 90px 20px;
-            background: linear-gradient(rgba(253,251,247,.85), rgba(253,251,247,.95)), url('img1.jpg');
-            background-size: cover;
-            border-bottom: 5px solid var(--accent);
-        }
+.features-container{max-width:1000px;margin:auto;padding:50px 20px}
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 5px;
-        }
+.mystery-box{
+background:#fff0f3;
+padding:30px;
+border-radius:12px;
+border:2px dashed var(--accent);
+text-align:center;
+margin-bottom:40px;
+}
 
-        .arabic-poetic {
-            font-family: 'Cairo', sans-serif;
-            font-size: 1.4rem;
-            margin: 15px 0 25px;
-            font-weight: 700;
-        }
+.how-it-works{display:flex;gap:40px;align-items:center}
+.step{border-left:4px solid var(--primary);padding-left:15px;margin-bottom:20px}
 
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--accent);
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-        }
+.demo-image img{
+width:100%;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.1)
+}
 
-        .price-badge {
-            background: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 1.4rem;
-            font-weight: bold;
-        }
+.order-wrapper{max-width:700px;margin:auto;padding:20px}
 
-        .value-prop {
-            background: white;
-            margin: 20px auto;
-            max-width: 600px;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
+.product-visual{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:12px 12px 0 0;
+}
 
-        .features-container {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+.order-form{
+background:#fff;
+padding:40px;
+border-radius:0 0 12px 12px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+position:relative;
+}
 
-        .mystery-box {
-            background: #fff0f3;
-            padding: 30px;
-            border-radius: 12px;
-            border: 2px dashed var(--accent);
-            text-align: center;
-            margin-bottom: 40px;
-        }
+.urgent-sticker{
+position:absolute;
+top:-15px;
+right:-10px;
+background:var(--urgent);
+color:#fff;
+padding:10px 15px;
+font-weight:bold;
+transform:rotate(5deg);
+}
 
-        .how-it-works {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
+label{display:block;font-weight:bold;color:var(--primary);margin-bottom:5px}
+input,textarea,select{
+width:100%;
+padding:14px;
+border-radius:6px;
+border:1px solid #ddd;
+font-family:'Cairo',sans-serif;
+margin-bottom:15px;
+}
 
-        .step {
-            border-left: 4px solid var(--primary);
-            padding-left: 15px;
-            margin-bottom: 20px;
-        }
+.btn{
+background:var(--primary);
+color:#fff;
+border:none;
+padding:18px;
+width:100%;
+font-size:1.3rem;
+cursor:pointer;
+border-radius:6px;
+font-family:'Cairo',sans-serif;
+}
 
-        .demo-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
+.pricing-summary{
+background:#f8f9fa;
+padding:20px;
+border-radius:8px;
+text-align:center;
+margin-top:15px;
+}
 
-        .order-wrapper {
-            max-width: 700px;
-            margin: auto;
-            padding: 20px;
-        }
+.total-line{font-size:1.6rem;font-weight:bold}
+.savings-line{color:var(--success);font-weight:bold;display:none}
 
-        .product-visual {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 12px 12px 0 0;
-        }
-
-        .order-form {
-            background: white;
-            padding: 40px;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            position: relative;
-        }
-
-        .urgent-sticker {
-            position: absolute;
-            top: -15px;
-            right: -10px;
-            background: var(--urgent);
-            color: white;
-            padding: 10px 15px;
-            font-weight: bold;
-            transform: rotate(5deg);
-        }
-
-        label {
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 14px;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 18px;
-            width: 100%;
-            font-size: 1.3rem;
-            cursor: pointer;
-            border-radius: 6px;
-            margin-top: 20px;
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .pricing-summary {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .total-line {
-            font-size: 1.6rem;
-            font-weight: bold;
-        }
-
-        .savings-line {
-            color: var(--success);
-            font-weight: bold;
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .how-it-works { flex-direction: column; }
-        }
-    </style>
+@media(max-width:768px){
+.how-it-works{flex-direction:column}
+}
+</style>
 </head>
 
 <body>
 
 <div class="promo-banner">
-    🔥 Stock Limité ! 50% Off 3la 3ème pièce + Livraison Blech !
+🔥 Stock Limité ! 50% Off 3la 3ème pièce + Livraison Blech !
 </div>
 
 <div class="hero">
-    <h1>Hoadys Candles</h1>
-    <div class="arabic-poetic" dir="rtl">"لأن بعض المشاعر لا تُقال.. بل تُضاء ❤️"</div>
-    <p class="tagline">Light the Flame, Reveal the Love</p>
-
-    <div class="value-prop">
-        <h2 class="ar-text">✨ Borjouliya, a3az Cadeau! ✨</h2>
-        <p>Jibha fi 9albha b'cadeau unique w original.</p>
-    </div>
-
-    <div class="price-badge">29 DT - Livraison Gratuite</div>
+<h1>Hoadys Candles</h1>
+<div class="arabic-poetic ar-text" dir="rtl">"لأن بعض المشاعر لا تُقال.. بل تُضاء ❤️"</div>
+<p class="tagline">Light the Flame, Reveal the Love</p>
+<div class="price-badge">29 DT - Livraison Gratuite</div>
 </div>
 
 <div class="features-container">
-    <div class="mystery-box">
-        <h2>🎁 Le Message Mystère 🎁</h2>
-        <p class="ar-text">Message romantique caché qui apparaît après combustion.</p>
-    </div>
+<div class="mystery-box">
+<h2>🎁 Le Message Mystère 🎁</h2>
+<p class="ar-text">Message romantique caché qui apparaît après combustion.</p>
+</div>
 
-    <div class="how-it-works">
-        <div>
-            <div class="step"><h3>1. Cha3alha</h3><p>Allumez la bougie.</p></div>
-            <div class="step"><h3>2. Estanna</h3><p>Après ~45 min…</p></div>
-            <div class="step"><h3>3. Surprise</h3><p>Le message apparaît.</p></div>
-        </div>
-        <div class="demo-image">
-            <img src="img2.png" alt="">
-        </div>
-    </div>
+<div class="how-it-works">
+<div>
+<div class="step"><h3>1. Cha3alha</h3><p>Allumez la bougie.</p></div>
+<div class="step"><h3>2. Estanna</h3><p>Après ~45 min.</p></div>
+<div class="step"><h3>3. Surprise</h3><p>Le message apparaît.</p></div>
+</div>
+<div class="demo-image"><img src="img2.png"></div>
+</div>
 </div>
 
 <div class="order-wrapper">
-    <img src="img3.png" class="product-visual">
+<img src="img3.png" class="product-visual">
 
-    <form class="order-form" id="orderForm">
-        <div class="urgent-sticker">Stock Limité</div>
+<form class="order-form" id="orderForm">
+<div class="urgent-sticker">Stock Limité</div>
 
-        <label>Nom & Prénom</label>
-        <input type="text" name="name" required>
+<label>Nom & Prénom</label>
+<input name="name" required>
 
-        <label>Téléphone</label>
-        <input type="tel" name="phone" required>
+<label>Téléphone</label>
+<input name="phone" required>
 
-        <label>Adresse</label>
-        <textarea name="address" required></textarea>
+<label>Adresse</label>
+<textarea name="address" required></textarea>
 
-        <label>
-            <input type="checkbox" id="customCheck" onchange="toggleCustom()">
-            Message personnalisé (+3 DT)
-        </label>
+<label>
+<input type="checkbox" id="customCheck" onchange="toggleCustom()"> Message personnalisé (+3 DT)
+</label>
 
-        <div id="customField" style="display:none;">
-            <input type="text" name="custom_message">
-        </div>
+<div id="customField" style="display:none">
+<input name="custom_message" placeholder="Votre message">
+</div>
 
-        <label>Quantité</label>
-        <select id="quantity" onchange="calculateTotal()">
-            <option value="1">1 Pièce (29 DT)</option>
-            <option value="2">2 Pièces (-30%)</option>
-            <option value="3">3 Pièces (-50% sur la 3e)</option>
-        </select>
+<label>Quantité</label>
+<select id="quantity" name="quantity" onchange="calculateTotal()">
+<option value="1">1 Pièce (29 DT)</option>
+<option value="2">2 Pièces (-30%)</option>
+<option value="3">3 Pièces (-50% sur la 3e)</option>
+</select>
 
-        <div class="pricing-summary">
-            <div class="total-line">Total: <span id="totalPrice">29.000</span> DT</div>
-            <div class="savings-line" id="savingsLine">
-                Rak rba7t <span id="savedAmount"></span> DT
-            </div>
-        </div>
+<div class="pricing-summary">
+<div class="total-line">Total: <span id="totalPrice">29.000</span> DT</div>
+<div class="savings-line" id="savingsLine">
+Rak rba7t <span id="savedAmount"></span> DT
+</div>
+</div>
 
-        <button class="btn">VALIDER LA COMMANDE</button>
-    </form>
+<button class="btn" id="submitBtn">VALIDER LA COMMANDE</button>
+</form>
 </div>
 
 <script>
-    const unitPrice = 29;
-    const customFee = 3;
+const unitPrice = 29;
+const customFee = 3;
 
-    function toggleCustom() {
-        document.getElementById('customField').style.display =
-            document.getElementById('customCheck').checked ? 'block' : 'none';
-        calculateTotal();
-    }
+function toggleCustom(){
+document.getElementById('customField').style.display =
+document.getElementById('customCheck').checked ? 'block':'none';
+calculateTotal();
+}
 
-    function calculateTotal() {
-        const qty = +document.getElementById('quantity').value;
-        const custom = document.getElementById('customCheck').checked;
+function calculateTotal(){
+const qty = parseInt(document.getElementById('quantity').value);
+const isCustom = document.getElementById('customCheck').checked;
 
-        let total = unitPrice;
-        if (qty >= 2) total += unitPrice * 0.7;
-        if (qty >= 3) total += unitPrice * 0.5;
+let total = 0;
+let original = unitPrice * qty;
 
-        let original = unitPrice * qty;
+total += unitPrice;
+if(qty>=2) total += unitPrice*0.7;
+if(qty>=3) total += unitPrice*0.5;
 
-        if (custom) {
-            total += customFee * qty;
-            original += customFee * qty;
-        }
+if(isCustom){
+total += customFee*qty;
+original += customFee*qty;
+}
 
-        document.getElementById('totalPrice').innerText = total.toFixed(3);
+document.getElementById('totalPrice').innerText = total.toFixed(3);
 
-        if (qty > 1) {
-            document.getElementById('savingsLine').style.display = 'block';
-            document.getElementById('savedAmount').innerText =
-                (original - total).toFixed(3);
-        } else {
-            document.getElementById('savingsLine').style.display = 'none';
-        }
-    }
+if(qty>1){
+document.getElementById('savingsLine').style.display='block';
+document.getElementById('savedAmount').innerText=(original-total).toFixed(3);
+}else{
+document.getElementById('savingsLine').style.display='none';
+}
+}
+
+/* GOOGLE SHEETS SUBMISSION */
+const form = document.getElementById('orderForm');
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxQPokdX-ui10J8xqZsthP4HmAXNLsknuGOxcMgLDnAUS9AXKaTrsJvDT3dsbnGvecXcg/exec';
+
+form.addEventListener('submit',e=>{
+e.preventDefault();
+const btn=document.getElementById('submitBtn');
+btn.disabled=true;
+btn.innerText='Moment svp...';
+
+fetch(scriptURL,{
+method:'POST',
+body:new FormData(form)
+})
+.then(()=>{
+alert('Commande reçue ✅ Nkalmouk pour confirmation.');
+form.reset();
+calculateTotal();
+btn.disabled=false;
+btn.innerText='VALIDER LA COMMANDE';
+document.getElementById('customField').style.display='none';
+})
+.catch(err=>{
+console.error(err);
+alert('Erreur connexion ❌');
+btn.disabled=false;
+btn.innerText='VALIDER LA COMMANDE';
+});
+});
 </script>
 
 </body>
